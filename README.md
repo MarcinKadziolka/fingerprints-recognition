@@ -1,7 +1,7 @@
 ## Installation
 ~~~
 git clone git@github.com:MarcinKadziolka/fingerprints_recognition.git
-cd done
+cd fingerprints_recognition
 conda env create -f environment.yml
 conda activate fingerprints_recognition
 ~~~
