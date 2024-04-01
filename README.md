@@ -84,7 +84,7 @@ To enhance the model's robustness and improve its generalization capabilities, v
 These augmentation techniques expose the model to a greater variety of training data, leading to better performance under diverse conditions and unconventional cases, thereby enhancing its overall resilience and fingerprint recognition capabilities in various scenarios.
 
 ## Results
-The model was trained for 20 epochs using Binary Cross-Entropy (BCE) as the loss function and the Adam optimizer with a learning rate of 0.001. As the model outputs values between zero and one, a threshold needs to be chosen for categorizing predictions. During training and validation, the threshold was set to 0.9. 
+The model was trained for 20 epochs using Binary Cross-Entropy (BCE) as the loss function and the Adam optimizer with a learning rate of 0.001. As the model outputs values between zero and one (similarity of fingerprints), a threshold needs to be chosen for categorizing predictions. During training and validation, the threshold was set to 0.9. 
 
 <img src="https://github.com/MarcinKadziolka/fingerprints_recognition/assets/30349386/1eebbe5b-8ec9-40e3-9839-8f469e268dad" width="900">
 <img src="https://github.com/MarcinKadziolka/fingerprints_recognition/assets/30349386/ecf354de-04fa-4de3-91c3-d98a63a8c3aa" width="900">
