@@ -51,9 +51,45 @@ To evaluate:
 ~~~
 python3 test.py pretrained/model.pth pretrained/config.yaml
 ~~~
+
+To visualize predictions:
+~~~
+python3 visualize_preds.py pretrained/model.pth pretrained/config.yaml
+~~~
+
 ## Dataset
 The Sokoto Coventry Fingerprint Dataset (SOCOFing) is a biometric database of fingerprints designed for academic research purposes. SOCOFing consists of 6000 fingerprint images from 600 individuals and includes unique attributes such as gender labels, hand and finger names, as well as synthetically altered versions of fingerprints with three different levels of modification: obliteration, central rotation, and z-cut.
 
 
 <img src="https://github.com/MarcinKadziolka/fingerprints_recognition/assets/30349386/20e7a7ec-f266-4d2d-8bc5-f562e7781d43" width="600">
+
+### Preparing dataset for siamase network
+To create an appropriate dataset for training the Siamese network model, a process of generating fingerprint pairs was conducted. This process involved pairing each genuine fingerprint image with its three modifications (obliteration, z-cut, central rotation). Additionally, negative pairs were created by pairing any fingerprints while maintaining hand and finger compatibility.
+
+## Preprocessing
+- Trimming Black Pixels: All images had non-fingerprint pixels at the edges, especially visible after rotation augmentations introducing unnecessary noise. All images were thus trimmed to remove these pixels.
+- Conversion to Grayscale: All images were converted to grayscale, reducing the number of channels from three to one, simplifying calculations.
+
+<img src="https://github.com/MarcinKadziolka/fingerprints_recognition/assets/30349386/5a76aa61-0af6-4659-858f-5eb5285e7934" width="600">
+
+## Augmentations
+To enhance the model's robustness and improve its generalization capabilities, various data augmentation techniques were applied:
+
+- Rotation: Involves rotating fingerprint images at various angles, enabling the model to recognize fingerprints from different angles.
+- Gaussian Blur: Applying Gaussian Blur introduces a level of blurriness, helping the model deal with minor fluctuations and irregularities.
+- Shear: Distorts images by shifting them along the horizontal or vertical axis, teaching the model to recognize fingerprints at various angles and bends.
+- Random Resizing: Involves scaling images at different ratios, allowing the model to recognize fingerprints of varying sizes, useful for different scanner types.
+- Random Perspective: Randomly modifies the image perspective, simulating different viewing angles, useful for fingerprints registered at various angles.
+
+These augmentation techniques expose the model to a greater variety of training data, leading to better performance under diverse conditions and unconventional cases, thereby enhancing its overall resilience and fingerprint recognition capabilities in various scenarios.
+
+## Results
+The model was trained for 20 epochs using Binary Cross-Entropy (BCE) as the loss function and the Adam optimizer with a learning rate of 0.001. As the model outputs values between zero and one, a threshold needs to be chosen for categorizing predictions. During training and validation, the threshold was set to 0.9. 
+
+<img src="https://github.com/MarcinKadziolka/fingerprints_recognition/assets/30349386/1eebbe5b-8ec9-40e3-9839-8f469e268dad" width="900">
+<img src="https://github.com/MarcinKadziolka/fingerprints_recognition/assets/30349386/ecf354de-04fa-4de3-91c3-d98a63a8c3aa" width="900">
+
+During testing with threshold of 0.5, model achieved accuracy above 90%.
+
+<img src="https://github.com/MarcinKadziolka/fingerprints_recognition/assets/30349386/03b7f12e-9a1c-4e6b-b02e-4980d1b01e75" width="500">
 
