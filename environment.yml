@@ -1,4 +1,4 @@
-name: fingerprint_recognition
+name: fingerprints_recognition
 channels:
   - pytorch
   - nvidia
