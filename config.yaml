@@ -1,0 +1,21 @@
+batch_size: 32
+num_epochs: 20
+lr: 0.001
+channels: 1
+data:
+  pad: 10
+  size: 100
+  random_rotation: 
+    degrees: 30
+  random_affine:
+    degrees: 0
+    shear: 10
+    scale: [0.8, 1.2]
+  random_perspective:
+    distortion_scale: 0.1
+    p: 0.5
+  gaussian_blur:
+    kernel_size: [3, 3]
+  random_resized_crop:
+    scale: [0.8, 1.2]
+    p: 0.5
