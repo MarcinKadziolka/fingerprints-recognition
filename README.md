@@ -51,3 +51,9 @@ To evaluate:
 ~~~
 python3 test.py pretrained/model.pth pretrained/config.yaml
 ~~~
+## Dataset
+The Sokoto Coventry Fingerprint Dataset (SOCOFing) is a biometric database of fingerprints designed for academic research purposes. SOCOFing consists of 6000 fingerprint images from 600 individuals and includes unique attributes such as gender labels, hand and finger names, as well as synthetically altered versions of fingerprints with three different levels of modification: obliteration, central rotation, and z-cut.
+
+
+<img src="https://github.com/MarcinKadziolka/fingerprints_recognition/assets/30349386/20e7a7ec-f266-4d2d-8bc5-f562e7781d43" width="600">
+
