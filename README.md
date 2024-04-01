@@ -9,11 +9,14 @@ conda activate fingerprints_recognition
 Download the dataset from [here](https://www.kaggle.com/datasets/ruizgara/socofing).
 
 
-Create folder 'dataset' and place SOCOFing folder in it.
-
-Folder structure should look like this:
+Create folder `dataset`:
 ~~~
-database/
+mkdir dataset
+~~~
+
+Place `SOCOFing` folder in it. Folder structure should look like this:
+~~~
+dataset/
 ├── SOCOFing/                                                                                  
 │   ├── Altered/
 │   │   └── Altered-Easy
@@ -34,7 +37,8 @@ To train new model:
 ~~~
 python3 train.py config.yaml
 ~~~
-After training is finished you can find saved model at `wandb/latest_run/files/model.pth`
+After training is finished you can find saved model at `wandb/latest_run/files/model.pth`.
+
 To evaluate:
 ~~~
 python3 test.py pretrained/model.pth pretrained/config.yaml
