@@ -1,4 +1,4 @@
-# Fingerprints recognition using siamase network
+# Fingerprints recognition using siamese network
 
 <img src="https://github.com/MarcinKadziolka/fingerprints_recognition/assets/30349386/13bfc0a2-5287-4b3f-8184-e4d448460346" width="500">
 <img src="https://github.com/MarcinKadziolka/fingerprints_recognition/assets/30349386/b1c6c6a3-c19b-4225-9586-330603b4bd86" width="500">
