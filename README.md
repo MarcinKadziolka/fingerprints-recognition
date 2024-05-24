@@ -63,7 +63,7 @@ The Sokoto Coventry Fingerprint Dataset (SOCOFing) is a biometric database of fi
 
 <img src="https://github.com/MarcinKadziolka/fingerprints_recognition/assets/30349386/20e7a7ec-f266-4d2d-8bc5-f562e7781d43" width="600">
 
-### Preparing dataset for siamase network
+### Preparing dataset for siamese network
 To create an appropriate dataset for training the Siamese network model, a process of generating fingerprint pairs was conducted. This process involved pairing each genuine fingerprint image with its three modifications (obliteration, z-cut, central rotation). Additionally, negative pairs were created by pairing any fingerprints while maintaining hand and finger compatibility.
 
 ## Preprocessing
