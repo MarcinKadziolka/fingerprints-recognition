@@ -1,5 +1,7 @@
 # Fingerprints recognition using siamese network
 
+This project focuses on recognizing fingerprints using a Siamese network. It leverages the Sokoto Coventry Fingerprint Dataset (SOCOFing) and applies various preprocessing and augmentation techniques to enhance model robustness. The model is trained to differentiate between genuine and altered fingerprints, achieving high accuracy through meticulous preprocessing and augmentation steps. The provided instructions cover environment setup, dataset preparation, training, evaluation, and visualization of results.
+
 <img src="https://github.com/MarcinKadziolka/fingerprints_recognition/assets/30349386/13bfc0a2-5287-4b3f-8184-e4d448460346" width="500">
 <img src="https://github.com/MarcinKadziolka/fingerprints_recognition/assets/30349386/b1c6c6a3-c19b-4225-9586-330603b4bd86" width="500">
 <img src="https://github.com/MarcinKadziolka/fingerprints_recognition/assets/30349386/7d2cb37e-a8a6-464b-83c1-b5ac43d87339" width="500">
