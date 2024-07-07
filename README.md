@@ -10,7 +10,7 @@ This project focuses on recognizing fingerprints using a Siamese network. It lev
 
 ## Installation
 ~~~
-git clone git@github.com:MarcinKadziolka/fingerprints_recognition.git
+git clone https://github.com/MarcinKadziolka/fingerprints-recognition.git
 cd fingerprints_recognition
 conda env create -f environment.yml
 conda activate fingerprints_recognition
